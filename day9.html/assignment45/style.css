@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color:black;
+}
+
+.disco-light {
+    width: 10rem;
+    height: 10rem;
+    background-color:blueviolet;
+    border: 2px solid black;
+    border-radius: 2rem;
+    position: relative;
+    transform: rotate(0deg);
+    animation: disco-evolve 4s linear infinite;
+}
+
+@keyframes disco-evolve {
+    0% {
+        .disco-light {
+            background-color: magenta;
+            transform: rotate(0deg);
+        }
+    }
+
+    25% {
+        .disco-light {
+            transform: rotate(90deg);
+            background-color:aqua;
+        }
+    }
+
+    50% {
+        .disco-light {
+            transform: rotate(120deg);
+            background-color:red;
+        }
+    }
+
+    75% {
+        transform: rotate(180deg);
+        background-color:orangered;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        background-color:blue;
+    }
+}
